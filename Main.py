@@ -1,5 +1,6 @@
 import random
-from numpy inport array
+import pickle
+from numpy import array
 Actions = ("quit", "save", "load", "get", "use", "move")
 
 
@@ -12,3 +13,4 @@ print('the letter suddenly ends.\n\n"Dang it!" you exclaim\nThey must have invad
 print("\nYou waste no time gathering what little supplies you have and embark for the bamboo forest. After a day or two of treacherous hiking you've finally reached it!\nThe entrance to the bamboo forest!")
 
 def main(hero):
+    print("yay")

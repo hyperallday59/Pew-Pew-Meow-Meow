@@ -23,7 +23,6 @@ class Area():
 			print("There's nothing to pickup here!")
 	
 	def use_item(self, hero):
-		'''use an item from the hero's inventory'''
 		if hero.inventory:
 			print(f"Your inventory:\n{hero.inventory}")
 			item = input("What item would you like to use? ").lower()
@@ -40,11 +39,14 @@ class Area():
 		else:
 			print("You don't have anything in your inventory to 'use'!")
 
-	def move(self, player):
-		'''ask the player which way they'd like to move'''
+	def move(self, hero):
 		print(f"You can go in the following directions:\n{self.allowed_movements}")
-		direction = input("Which direction would you like to 'move'? ")
+		direction = input("Which direction would you like to run? ")
 		if direction in MOVEMENT:
 			if direction in self.allowed_movements:
 				print(f"You move {direction}.")
-				player.position = direction
+				hero.position = direction
+			else:
+				print(f"You hit a wall of impenitrable bamboo, you can't move {direction} from here.")
+		else:
+			print(f"'{direction}' isn't a direction the hero can move")

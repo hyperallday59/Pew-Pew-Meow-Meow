@@ -50,3 +50,14 @@ class Area():
 				print(f"You hit a wall of impenitrable bamboo, you can't move {direction} from here.")
 		else:
 			print(f"'{direction}' isn't a direction the hero can move")
+
+	def description(self):
+		key = tuple(self.room_items), tuple(self.usable_items)
+		return "\n\n"+self.descriptions.get(key, "Invalid room setting - something broke")
+
+	def special(self, key):
+		if key == 'key':
+			self.allowed_movements.append('south')
+
+landscape = {}
+entry = Area()

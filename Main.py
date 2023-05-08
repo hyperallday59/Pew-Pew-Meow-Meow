@@ -1,6 +1,7 @@
 import random
 import pickle
 from numpy import array
+from Landscapes import Area, MOVEMENT
 Actions = ("quit", "save", "load", "get", "use", "move")
 
 

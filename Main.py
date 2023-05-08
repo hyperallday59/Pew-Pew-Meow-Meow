@@ -45,3 +45,27 @@ def load():
 		print("Game loaded!")
 	except FileNotFoundError:
 		print("Game file not found!")
+
+hero = Hero()
+def main(hero):
+	choice = None
+	while choice != "quit":
+		#unpack current room variables
+		room = Landscape.get(hero.position, "Invalid room setting - something broke")
+		print(room.description())
+		choice = valid_input()
+		if choice == "quit":
+			print("Thanks for playing!")
+		elif choice == "save":
+			save()
+		elif choice == "load":
+			load()
+		elif choice == "get":
+			room.get_item(hero)
+		elif choice == "use":
+			room.use_item(hero)
+		elif choice == "move":
+			room.move(hero)
+
+if __name__ == "__main__":
+	main(hero)

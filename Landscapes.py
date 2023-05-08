@@ -39,3 +39,12 @@ class Area():
 				print(f"You don't have {item} in your inventory.")
 		else:
 			print("You don't have anything in your inventory to 'use'!")
+
+	def move(self, player):
+		'''ask the player which way they'd like to move'''
+		print(f"You can go in the following directions:\n{self.allowed_movements}")
+		direction = input("Which direction would you like to 'move'? ")
+		if direction in MOVEMENT:
+			if direction in self.allowed_movements:
+				print(f"You move {direction}.")
+				player.position = direction

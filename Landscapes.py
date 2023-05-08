@@ -18,7 +18,7 @@ class Area():
 				hero.inventory.append(item)
 				self.area_items.remove(item)
 			else:
-				print(f"Couldn't find {item} in room.")
+				print(f"Couldn't find {item} in area.")
 		else:
 			print("There's nothing to pickup here!")
 	
@@ -52,12 +52,18 @@ class Area():
 			print(f"'{direction}' isn't a direction the hero can move")
 
 	def description(self):
-		key = tuple(self.room_items), tuple(self.usable_items)
-		return "\n\n"+self.descriptions.get(key, "Invalid room setting - something broke")
+		key = tuple(self.area_items), tuple(self.usable_items)
+		return "\n\n"+self.descriptions.get(key, "Invalid area setting - something broke")
 
 	def special(self, key):
 		if key == 'key':
 			self.allowed_movements.append('south')
 
 landscape = {}
+
 entry = Area()
+entry.area_items.append('key')
+entry.usable_items['stick'] = "You use the stick to move the mound of dirt."
+entry.allowed_movements.append('west')
+entry.descriptions[((),())] = "Entry: Scattered dirt and a used stick."
+landscape[(0,0)] = entry

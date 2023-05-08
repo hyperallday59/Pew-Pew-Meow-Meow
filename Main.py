@@ -1,7 +1,7 @@
 import random
 import pickle
 from numpy import array
-from Landscapes import Area, MOVEMENT
+from Landscapes import landscape, MOVEMENT
 ACTIONS = ("quit", "save", "load", "get", "use", "move")
 
 class Hero():
@@ -51,7 +51,7 @@ def main(hero):
 	choice = None
 	while choice != "quit":
 		#unpack current room variables
-		room = Landscape.get(hero.position, "Invalid room setting - something broke")
+		room = landscape.get(hero.position, "Invalid room setting - something broke")
 		print(room.description())
 		choice = valid_input()
 		if choice == "quit":

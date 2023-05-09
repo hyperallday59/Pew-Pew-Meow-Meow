@@ -8,7 +8,7 @@ class Hero():
 	def __init__(self):
 		self.__position = (0, 0)
 		self.inventory = []
-		self.name = input("What is your name?\n").title()
+		self.name = input("What is your name\nOh Great Warrior?\n").title()
 		
 	@property
 	def position(self):

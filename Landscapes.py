@@ -53,7 +53,7 @@ class Area():
 
 	def description(self):
 		key = tuple(self.area_items), tuple(self.usable_items)
-		return "\n\n"+self.descriptions.get(key, "Invalid area setting - something broke")
+		return "\n\n"+self.descriptions.get(key, "no" )
 
 	def special(self, key):
 		if key == 'key':
@@ -62,8 +62,6 @@ class Area():
 landscape = {}
 
 entry = Area()
-entry.area_items.append('key')
-entry.usable_items['stick'] = "You use the stick to move the mound of dirt."
 entry.allowed_movements.append('west')
 entry.descriptions[((),())] = "Entry: Scattered dirt and a used stick."
 landscape[(0,0)] = entry

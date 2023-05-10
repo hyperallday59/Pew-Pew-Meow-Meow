@@ -28,17 +28,17 @@ def valid_input(prompt = "What would you like to do? "):
 
 def save():
 	with open('game.dat','wb') as f:
-		pickle.dump(Hero,f)
+		pickle.dump(hero,f)
 		pickle.dump(landscape,f)
 	print("Game saved!")
 
 def load():
 	#using global variables to reduce size
-	global Hero
+	global hero
 	global landscape
 	try:
 		with open("game.dat",'rb') as f:
-			Hero = pickle.load(f)
+			hero = pickle.load(f)
 			landscape = pickle.load(f)
 		print("Game loaded!")
 	except FileNotFoundError:

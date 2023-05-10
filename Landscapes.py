@@ -81,3 +81,13 @@ Area_2.area_items.append('onion')
 Area_2.descriptions[(('onion',),())] = "You head down the path and continue on for a while. Eventually you find a camp with a very old merchant. The trail runs through the camp and continues east.\nYou talk to the merchant and he offers you a reward if you can anwser his riddle\n\nYou cut me up, you chop me up, you dice me up and you cry over me. What am I?\n\nHINT: use the get command to anwser the riddle."
 Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp and trail remains the same"
 landscape[(1,-1)] = Area_2
+
+Area_3 = Area()
+Area_3.allowed_movements.append('west')
+Area_3.allowed_movements.append('south')
+Area_3.usable_items['bamboo'] = "After sneaking up on the enemy you use your bamboo like a baseball bat and crack it acrost the back of his head.\nwith one blow the enemy has been defeated"
+Area_3.area_items.append('sword')
+Area_3.descriptions[(('sword',),('bamboo',))] = "Not long after meating the merchant, you stumble acrost one of the evil ninja cat camps.\nYou notice one of the enemies on the outskirts of the camp is playing with one of your clans sacred swords.\nYou might be able to sneak attack him from behind!"
+
+Area_3.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp and trail remains the same"
+landscape[(2,-1)] = Area_2

@@ -62,6 +62,21 @@ class Area():
 landscape = {}
 
 entry = Area()
-entry.allowed_movements.append('west')
-entry.descriptions[((),())] = "Entry: Scattered dirt and a used stick."
+entry.allowed_movements.append('south')
+entry.descriptions[((),())] = "\nAfter months of training you finally return home to the Ninja Cat Village. You've been training to make your family proud and become the ninja you were always meant to be.\nBut... no one is in the village, it's as if it's been deserted.\nAfter searching the village for quite some time you find a letter. It's from your grandfather, the chief of Ninja Cat Village\ngrandson, the evil ninja cats have invaded our lands stealing our Ninja gear and enslaving us. If you find this we must have all already been taken! Your final test to become a true shinobi will be saving our people and reclaiming our Ninja gear! Luckily I located the Evil Ninja Cat Mansion located deep in the bamboo forest. It's...\nthe letter suddenly ends.\n\nDang it! you exclaim\nThey must have invaded the village while your grandfather was writing the letter.\n\nYou waste no time gathering what little supplies you have and embark for the bamboo forest. After a day or two of treacherous hiking you've finally reached it!\nThe entrance to the bamboo forest!\nMove south to start your journey"
 landscape[(0,0)] = entry
+
+Area_1 = Area()
+Area_1.allowed_movements.append('north')
+Area_1.allowed_movements.append('east')
+Area_1.area_items.append('bamboo')
+Area_1.descriptions[(('bamboo',),())] = "You've entered the Bamboo forest!\nYou notice tall walls of bamboo blocking you on in almost every direction. However you notice a small path headed east.\nYou also notice several stalks of sturdy cut bamboo lying around."
+Area_1.descriptions[((),())] = "You've entered the Bamboo forest!\nYou notice tall walls of bamboo blocking you on in almost every direction. However you notice a small path headed east."
+landscape[(0,-1)] = Area_1
+
+Area_2 = Area()
+Area_2.allowed_movements.append('west')
+Area_2.allowed_movements.append('east')
+Area_1.area_items.append('')
+Area_2.descriptions[(('Onion',),())] = "You head down the path and continue on for a while. Eventually you find a camp with a very old merchant. The trail runs through the camp and continues east.\nYou talk to the merchant and he offers you a reward if you can anwser his riddle\nYou cut me up, you chop me up, you dice me up and you cry over me. What am I?\nHINT: use the get function to anwser the riddle."
+Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\n Beyond that the camp and trail remains the same"

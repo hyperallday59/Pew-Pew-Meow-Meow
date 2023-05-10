@@ -16,7 +16,7 @@ class Hero():
 		
 	@position.setter
 	def position(self,new):
-		self.__position += new
+		self.__position += MOVEMENT[new]
 
 def valid_input(prompt = "What would you like to do? "):
 	print("\t--Options--")
@@ -30,7 +30,7 @@ def save():
 	'''save the player object and rooms dictionary to a file'''
 	with open('game.dat','wb') as f:
 		pickle.dump(Hero,f)
-		pickle.dump(Landscape,f)
+		pickle.dump(landscape,f)
 	print("Game saved!")
 
 def load():

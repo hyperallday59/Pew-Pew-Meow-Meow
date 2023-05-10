@@ -77,6 +77,7 @@ landscape[(0,-1)] = Area_1
 Area_2 = Area()
 Area_2.allowed_movements.append('west')
 Area_2.allowed_movements.append('east')
-Area_1.area_items.append('')
-Area_2.descriptions[(('Onion',),())] = "You head down the path and continue on for a while. Eventually you find a camp with a very old merchant. The trail runs through the camp and continues east.\nYou talk to the merchant and he offers you a reward if you can anwser his riddle\nYou cut me up, you chop me up, you dice me up and you cry over me. What am I?\nHINT: use the get function to anwser the riddle."
-Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\n Beyond that the camp and trail remains the same"
+Area_2.area_items.append('onion')
+Area_2.descriptions[(('onion',),())] = "You head down the path and continue on for a while. Eventually you find a camp with a very old merchant. The trail runs through the camp and continues east.\nYou talk to the merchant and he offers you a reward if you can anwser his riddle\n\nYou cut me up, you chop me up, you dice me up and you cry over me. What am I?\n\nHINT: use the get command to anwser the riddle."
+Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp and trail remains the same"
+landscape[(1,-1)] = Area_2

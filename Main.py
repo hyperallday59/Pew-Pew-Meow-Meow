@@ -33,7 +33,6 @@ def save():
 	print("Game saved!")
 
 def load():
-	#using global variables to reduce size
 	global hero
 	global landscape
 	try:

@@ -88,6 +88,6 @@ Area_3.allowed_movements.append('south')
 Area_3.usable_items['bamboo'] = "After sneaking up on the enemy you use your bamboo like a baseball bat and crack it acrost the back of his head.\nwith one blow the enemy has been defeated"
 Area_3.area_items.append('sword')
 Area_3.descriptions[(('sword',),('bamboo',))] = "Not long after meating the merchant, you stumble acrost one of the evil ninja cat camps.\nYou notice one of the enemies on the outskirts of the camp is playing with one of your clans sacred swords.\nYou might be able to sneak attack him from behind!"
-
-Area_3.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp and trail remains the same"
-landscape[(2,-1)] = Area_2
+Area_3.descriptions[(('sword',),())] = "The enemy lies at your feet, and the sword he was using is next to him. The trail continues south."
+Area_3.descriptions[((),())] = "The enemy lies at your feet. The trail continues south."
+landscape[(2,-1)] = Area_3

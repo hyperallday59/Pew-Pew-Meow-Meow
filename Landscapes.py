@@ -32,6 +32,7 @@ class Area():
 					hero.inventory.remove(item)
 					del self.usable_items[item]
 					self.special(item)
+					self.dragon(item)
 				else:
 					print(f"You can't use {item} here.")
 			else:
@@ -56,6 +57,10 @@ class Area():
 		return "\n\n"+self.descriptions.get(key, "no" )
 
 	def special(self, key):
+		if key == 'secret':
+			self.allowed_movements.append('south')
+	
+	def dragon(self, key):
 		if key == 'secret':
 			self.allowed_movements.append('south')
 
@@ -106,3 +111,9 @@ Area_5.allowed_movements.append('north')
 Area_5.descriptions[((),('secret',))] = "Suddenly as your traveling along the path it ends, A wall of bamboo has blocked the path. You find a sign nearby. Inscribed on the sign is the message 'tell me your hiddden truth'."
 Area_5.descriptions[((),())] = "You told the bamboo your powerfull secret. It will now let you continue down the path heading south."
 landscape[(2,-3)] = Area_5
+
+Area_6 = Area()
+Area_6.allowed_movements.append('east')
+Area_6.allowed_movements.append('west')
+Area_5.descriptions[((),())] = "After following the path for some time you reach a fork in the path. One way heads east, and the other heads west."
+landscape[(2,-4)] = Area_6

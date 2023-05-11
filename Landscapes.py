@@ -58,6 +58,8 @@ class Area():
 	def special(self, key):
 		if key == 'secret':
 			self.allowed_movements.append('south')
+		if key == 'horn':
+			self.allowed_movements.append('east')
 
 landscape = {}
 
@@ -113,3 +115,24 @@ Area_6.allowed_movements.append('west')
 Area_6.allowed_movements.append('north')
 Area_6.descriptions[((),())] = "After following the path for some time you reach a fork in the path. One way heads east, and the other heads west."
 landscape[(2,-4)] = Area_6
+
+Area_7 = Area()
+Area_7.allowed_movements.append('west')
+Area_7.area_items.append('key')
+Area_7.usable_items['horn'] = "You blow the horn with all your might. At first it seems as if nothing has happened.\nSuddenly you hear a big bang and the water fall parts revealing a secret passage"
+Area_7.descriptions[(('key',),('horn',))] = "After heading east you reach a shallow pool of water. The pool is surrounded by bamboo and has a water fall flowing into it.\nYou notice something shiny at the bottom of the pool."
+Area_7.descriptions[((),('horn',))] = "You found a key at the bottom of the pool, you wonder what it goes to. the pool and water fall remain the same.\nThe water fall has a suspicious glint"
+Area_7.descriptions[((),())] = "The shallow pool of water remains as beautiful as ever. You can either head back the way you came or down the secret passage."
+landscape[(3,-4)] = Area_7
+
+Area_8 = Area()
+Area_8.allowed_movements.append('east')
+Area_8.allowed_movements.append('west')
+Area_8.area_items.append('horn')
+Area_8.usable_items['key'] = "You've opened the old chest and revealed an old battle horn."
+Area_8.descriptions[(('horn',),('key',))] = "After heaing west you find a mysterious chest\nMaybe you can find something to open it\nThe path continues west"
+Area_8.descriptions[(('horn',),())] = "The chest in the middle of the path is now open and a battle horn rests inside\n the path continues west"
+Area_8.descriptions[((),())] = "The empty chest sits in the middle of the path\nThe path continues west"
+landscape[(1,-4)] = Area_8
+
+Area_9 = Area()

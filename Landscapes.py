@@ -91,3 +91,11 @@ Area_3.descriptions[(('sword',),('bamboo',))] = "Not long after meating the merc
 Area_3.descriptions[(('sword',),())] = "The enemy lies at your feet, and the sword he was using is next to him. The trail continues south."
 Area_3.descriptions[((),())] = "The enemy lies at your feet. The trail continues south."
 landscape[(2,-1)] = Area_3
+
+Area_4 = Area()
+Area_4.allowed_movements.append('south')
+Area_4.allowed_movements.append('north')
+Area_4.area_items.append('secret')
+Area_4.descriptions[(('secret',),())] = "After running south you reach a clearing. The trail continues through the clearing and turns west.\nIn the clearing there is a mysterious box that has a riddle enscribed on it, you try to open it.\nIt won't budge. The riddle reads/n/nI'm something you can hold, but you can't touch, You can whisper me softly, but I won't say much. I'm kept in a place where no one can find, And locked in a vault inside your mind. Some people keep me safe, and others let me out, Some people share me freely, while others tightly pout. I can make you feel powerful, or make you feel weak, I can be hidden for ages, or revealed in a peek.\n\nMaybe if you can anwser the riddle the box will open"
+Area_4.descriptions[((),())] = "You've solved the riddle. The boxes lid flies open and a mysterious power flows into you, you hear a voice whisper\n'the power of a secret'\n The empty box is in front of you. The clearing remains the same and the trail continues west."
+landscape[(2,-2)] = Area_4

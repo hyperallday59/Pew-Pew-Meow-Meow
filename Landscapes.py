@@ -28,7 +28,7 @@ class Area():
 			item = input("What item would you like to use? ").lower()
 			if item in hero.inventory:
 				if item in self.usable_items:
-					print(self.useable_items[item])
+					print(self._items[item])
 					hero.inventory.remove(item)
 					del self.usable_items[item]
 					self.special(item)
@@ -71,7 +71,7 @@ Area_1.allowed_movements.append('north')
 Area_1.allowed_movements.append('east')
 Area_1.area_items.append('bamboo')
 Area_1.descriptions[(('bamboo',),())] = "You've entered the Bamboo forest!\nYou notice tall walls of bamboo blocking you on in almost every direction. However you notice a small path headed east.\nYou also notice several stalks of sturdy cut bamboo lying around."
-Area_1.descriptions[((),())] = "You've entered the Bamboo forest!\nYou notice tall walls of bamboo blocking you on in almost every direction. However you notice a small path headed east."
+Area_1.descriptions[((),())] = "You've entered the Bamboo forest!\nYou notice tall walls of bamboo blocking you in almost every direction. However you notice a small path headed east."
 landscape[(0,-1)] = Area_1
 
 Area_2 = Area()
@@ -79,7 +79,7 @@ Area_2.allowed_movements.append('west')
 Area_2.allowed_movements.append('east')
 Area_2.area_items.append('onion')
 Area_2.descriptions[(('onion',),())] = "You head down the path and continue on for a while. Eventually you find a camp with a very old merchant. The trail runs through the camp and continues east.\nYou talk to the merchant and he offers you a reward if you can anwser his riddle\n\nYou cut me up, you chop me up, you dice me up and you cry over me. What am I?\n\nHINT: use the get command to anwser the riddle."
-Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp and trail remains the same"
+Area_2.descriptions[((),())] = "You've successfully beaten the old merhcants riddle!\nBeyond that the camp remains the same and the trail continues east."
 landscape[(1,-1)] = Area_2
 
 Area_3 = Area()

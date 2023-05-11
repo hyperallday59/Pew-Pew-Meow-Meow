@@ -103,6 +103,6 @@ landscape[(2,-2)] = Area_4
 Area_5 = Area()
 Area_5.usable_items['secret'] = "The bamboo accepts your secret and lets you move forward"
 Area_5.allowed_movements.append('north')
-Area_5.descriptions[((),('secret',))] = "Suddenly as your traveling along the path it ends, A wall of bamboo has blocked the path. You find a sign nearby. Inscribed on the sign is the message tell me your truth."
+Area_5.descriptions[((),('secret',))] = "Suddenly as your traveling along the path it ends, A wall of bamboo has blocked the path. You find a sign nearby. Inscribed on the sign is the message 'tell me your hiddden truth'."
 Area_5.descriptions[((),())] = "You told the bamboo your powerfull secret. It will now let you continue down the path heading south."
 landscape[(2,-3)] = Area_5

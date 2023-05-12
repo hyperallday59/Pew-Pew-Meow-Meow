@@ -62,6 +62,14 @@ class Area():
 			self.allowed_movements.append('east')
 		if key == 'invisibility':
 			self.allowed_movements.append('west')
+		if key == 'rope':
+			self.allowed_movements.append('west')
+		if key == 'lock pick':
+			self.allowed_movements.append('west')
+		if key == 'silver key':
+			self.allowed_movements.append('south')
+		if key == 'bow and arrow':
+			self.allowed_movements.append('east')
 
 landscape = {}
 
@@ -170,3 +178,61 @@ Area_12.descriptions[((),())] = "You've grabed the old rope from the cart, the c
 landscape[(-2,-4)] = Area_12
 
 Area_13 = Area()
+Area_13.allowed_movements.append('east')
+Area_13.usable_items['rope'] = "you use the old rope to climb down the clif"
+Area_13.descriptions[((),('rope',))] = "The path suddenly stops, a cliff lies  before you, but you see that the path continues at the bottom.\nThere must be a way to get down"
+Area_13.descriptions[((),())] = "You tie the rope to a nearby rock and use it to traverse the cliff, you can now continue down the path"
+landscape[(-3,-4)] = Area_13
+
+Area_14 = Area()
+Area_14.allowed_movements.append('west')
+Area_14.allowed_movements.append('east')
+Area_14.allowed_movements.append('south')
+Area_14.area_items.append('bow and arrow')
+Area_14.descriptions[(('bow and arrow',),())] = "You reach the bottom of the cliff and continued down the path. After walking for some time you reach another cross road, one direction heading west, and the other heading south.\nYou notice that near the cross roads there is an old bow and arrow"
+Area_14.descriptions[((),())] = "You reach the bottom of the cliff and continued down the path. After walking for some time you reach another cross road, one direction heading west, and the other heading south.\n There are no signs of any other loot around the cross roads"
+landscape[(-4,-4)] = Area_14
+
+Area_15 = Area()
+Area_15.allowed_movements.append('east')
+Area_15.usable_items['lock pick'] = "you use the lock pick to unlock the iron doors"
+Area_15.descriptions[((),('lock pick',))] = "You continue to travel east and find that the path leads to a massive cave. The cave entrance is gaurded by a massive locked iron door.\nIf only there was someway to unlock it"
+Area_15.descriptions[((),())] = "the iron doors clamber open, letting you continue on into the cave."
+landscape[(-5,-4)] = Area_15
+
+Area_16 = Area()
+Area_16.allowed_movements.append('north')
+Area_16.allowed_movements.append('east')
+Area_16.area_items.append('lock pick')
+Area_16.descriptions[(('lock pick',),())] ="While heading south you meet a suspicious character,\nHello there stranger, anwser my riddle and I'll give you a prize! I am the key that fits no lock, yet I open what is closed and blocked. What am I?\nThe path turns and continues east"
+Area_16.descriptions[((),())] = "Good job stranger take this lock pick\nWith that the stranger has lost interest in you and continued on his way.\nThe path turns and continues east"
+landscape[(-4,-5)] = Area_16
+
+Area_17 = Area()
+Area_17.allowed_movements.append('west')
+Area_17.usable_items['silver key'] = "You use the silver key to unlock the back door of the enemy ninja cat castle"
+Area_17.descriptions[((),('silver key',))] = "You've finally reached the enemy ninja cat's castle. But the entrance to the castle is very heavily guarded.\nyou decide to look for a secret entrance. After hours of searching you finally find a secret back door\nBut, the door is locked by a silver padlock blocking your entrance\nMove west to return to the path"
+Area_17.descriptions[((),())] = "The padlock on the door falls to the ground granting you entrance to the castle.\nMove south the enter the castle, Move west to return to the path"
+landscape[(-3,-5)] = Area_17
+
+Area_18 = Area()
+Area_18.allowed_movements.append('east')
+Area_18.allowed_movements.append('north')
+Area_18.area_items.append('spear')
+Area_18.descriptions[(('spear',),())] = "You reach the back of the cave, Theres another chest in front of you locked by a magical riddle\nTo the north you notice something glowing in cavity in the wall\n The riddle on the box reads\nI'm made of wood or sometimes steel, My point is sharp, my aim is real. I'm hurled through air with strength and might, And can bring down a beast with just one strike. What am I?"
+Area_18.descriptions[((),())] = "The box opens and reveals a very powerful ancient spear. You gladly take the spear.\nTo the north you notice something glowing in cavity in the wall"
+landscape[(-6,-4)] = Area_18
+
+Area_19 = Area()
+Area_19.allowed_movements.append('south')
+Area_19.area_items.append('silver key')
+Area_19.descriptions[(('silver key',),())] = "As you approach the cavity you find the skeleton of a ninja cat imprisoned in the cave. He clutches a silver key in his right hand\nMove south to walk back to the chest"
+Area_19.descriptions[((),())] = "As you approach the cavity you find the skeleton of a ninja cat imprisoned in the cave.\nMove south to head back to the chest"
+landscape[(-6,-3)] = Area_19
+
+Area_20 = Area()
+Area_19.allowed_movements.append('north')
+Area_20.usable_items['bow and arrow'] =
+Area_20.descriptions[((),('bow and arrow',))] =
+Area_20.descriptions[((),())] =
+landscape[(-3,-6)] = Area_20

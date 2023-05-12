@@ -60,6 +60,8 @@ class Area():
 			self.allowed_movements.append('south')
 		if key == 'horn':
 			self.allowed_movements.append('east')
+		if key == 'invisibility':
+			self.allowed_movements.append('west')
 
 landscape = {}
 
@@ -136,3 +138,17 @@ Area_8.descriptions[((),())] = "The empty chest sits in the middle of the path\n
 landscape[(1,-4)] = Area_8
 
 Area_9 = Area()
+Area_9.allowed_movements.append('east')
+Area_9.usable_items['invisibility'] = "you use the invisibility the dragon gifted you. Using this ability you easily sneak past and take out the enemies.\nYou can now continue down the path."
+Area_9.descriptions[((),('invisibility',))] = "you come to a sudden halt as you head down the path. You notice two enemy Cat Ninjas in front of you.\nLuckily they haven't noticed you. There must be a way past them"
+Area_9.descriptions[((),())] = "You've successfully snuck past and defeated the enemies. You can continue down the path!"
+landscape[(0,-4)] = Area_9
+
+Area_10 = Area()
+Area_10.allowed_movements.append('west')
+Area_10.usable_items['onion'] = "you give the dragon an onion"
+Area_10.area_items.append('invisibility')
+Area_10.descriptions[(('invisibility',),('onion',))] ="You enter a large cavern filled with gold, the only exit being the one you came through, At the center sits a mighty dragon. The dragon speaks\n\nYou who has entered my cave, bring me my favorite vegtable and I'll lend you my power"
+Area_10.descriptions[(('invisibility',),())] = "Thank you young one, the dragon booms, I'll lend you my power\nThe dragon gifts you the power of invisibility"
+Area_10.descriptions[((),())] = "You've claimed the power of invisibility\nThe dragon is happily munching on his onion\nThe only exis is the entrance to the cave"
+landscape[(4,-4)] = Area_10

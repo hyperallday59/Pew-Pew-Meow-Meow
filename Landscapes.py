@@ -123,7 +123,7 @@ Area_7.allowed_movements.append('west')
 Area_7.area_items.append('key')
 Area_7.usable_items['horn'] = "You blow the horn with all your might. At first it seems as if nothing has happened.\nSuddenly you hear a big bang and the water fall parts revealing a secret passage"
 Area_7.descriptions[(('key',),('horn',))] = "After heading east you reach a shallow pool of water. The pool is surrounded by bamboo and has a water fall flowing into it.\nYou notice something shiny at the bottom of the pool.\nIt looks like a key"
-Area_7.descriptions[((),('horn',))] = "You found a key at the bottom of the pool, you wonder what it goes to. the pool and water fall remain the same.\nThe water fall has a suspicious glint"
+Area_7.descriptions[((),('horn',))] = "You found a key at the bottom of the pool, you wonder what it goes to. the pool and water fall remain the same.\nThe water fall has a suspicious glint, there might be a secret passage"
 Area_7.descriptions[((),())] = "The shallow pool of water remains as beautiful as ever. You can either head back the way you came or down the secret passage."
 landscape[(3,-4)] = Area_7
 
@@ -149,6 +149,6 @@ Area_10.allowed_movements.append('west')
 Area_10.usable_items['onion'] = "you give the dragon an onion"
 Area_10.area_items.append('invisibility')
 Area_10.descriptions[(('invisibility',),('onion',))] ="You enter a large cavern filled with gold, the only exit being the one you came through, At the center sits a mighty dragon. The dragon speaks\n\nYou who has entered my cave, bring me my favorite vegtable and I'll lend you my power"
-Area_10.descriptions[(('invisibility',),())] = "Thank you young one, the dragon booms, I'll lend you my power\nThe dragon gifts you the power of invisibility"
-Area_10.descriptions[((),())] = "You've claimed the power of invisibility\nThe dragon is happily munching on his onion\nThe only exis is the entrance to the cave"
+Area_10.descriptions[(('invisibility',),())] = "Thank you young one, the dragon booms, I'll lend you my power\nThe dragon gifts you the power of invisibility\nHINT: you need to grab the power up"
+Area_10.descriptions[((),())] = "You've claimed the power of invisibility\nThe dragon is happily munching on his onion\nThe only exit is the entrance to the cave"
 landscape[(4,-4)] = Area_10

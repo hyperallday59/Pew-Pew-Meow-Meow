@@ -156,7 +156,7 @@ Area_10 = Area()
 Area_10.allowed_movements.append('west')
 Area_10.usable_items['onion'] = "you give the dragon an onion"
 Area_10.area_items.append('invisibility')
-Area_10.descriptions[(('invisibility',),('onion',))] ="You enter a large cavern filled with gold, the only exit being the one you came through, At the center sits a mighty dragon. The dragon speaks\n\nYou who has entered my cave, bring me my favorite vegtable and I'll lend you my power"
+Area_10.descriptions[(('invisibility',),('onion',))] ="You enter a large cavern filled with gold, the only exit being the one you came through, At the center sits a mighty dragon. The dragon speaks\n\nYou who has entered my cave, bring me my favorite vegatable and I'll lend you my power"
 Area_10.descriptions[(('invisibility',),())] = "Thank you young one, the dragon booms, I'll lend you my power\nThe dragon gifts you the power of invisibility\nHINT: you need to grab the power up"
 Area_10.descriptions[((),())] = "You've claimed the power of invisibility\nThe dragon is happily munching on his onion\nThe only exit is the entrance to the cave"
 landscape[(4,-4)] = Area_10
@@ -166,7 +166,7 @@ Area_11.allowed_movements.append('west')
 Area_11.allowed_movements.append('east')
 Area_11.area_items.append('shield')
 Area_11.descriptions[(('shield',),())] = "While heading down the path you spot one of the sacred chests locked by a magical riddle from the Ninja cat village, They must have dropped it on the trail.\nThe riddle on the chest reads\nI'm by nature solitary, scarred by spear and wounded by sword, weary of battle. I frequently see the face of war, and fight hateful enemies; yet I hold no hope of help being brought to me in the battle, before I'm eventually done to death. What am I\n Solve the riddle and the box will open\nThe path continues west"
-Area_11.descriptions[((),())] = "Congradulation you've solved the riddle!\nThe path continues west"
+Area_11.descriptions[((),())] = "Congradulations you've solved the riddle!\nThe path continues west"
 landscape[(-1,-4)] = Area_11
 
 Area_12 = Area()
@@ -196,7 +196,7 @@ landscape[(-4,-4)] = Area_14
 Area_15 = Area()
 Area_15.allowed_movements.append('east')
 Area_15.usable_items['lock pick'] = "you use the lock pick to unlock the iron doors"
-Area_15.descriptions[((),('lock pick',))] = "You continue to travel east and find that the path leads to a massive cave. The cave entrance is gaurded by a massive locked iron door.\nIf only there was someway to unlock it"
+Area_15.descriptions[((),('lock pick',))] = "You continue to travel east and find that the path leads to a massive cave. The cave entrance is gaurded by a massive locked iron door.\nIf only there was some way to unlock it"
 Area_15.descriptions[((),())] = "the iron doors clamber open, letting you continue on into the cave."
 landscape[(-5,-4)] = Area_15
 
@@ -204,13 +204,13 @@ Area_16 = Area()
 Area_16.allowed_movements.append('north')
 Area_16.allowed_movements.append('east')
 Area_16.area_items.append('lock pick')
-Area_16.descriptions[(('lock pick',),())] ="While heading south you meet a suspicious character,\nHello there stranger, anwser my riddle and I'll give you a prize! I am the key that fits no lock, yet I open what is closed and blocked. What am I?\nThe path turns and continues east"
+Area_16.descriptions[(('lock pick',),())] ="While heading south you meet a suspicious character,\nHello there stranger, anwser my riddle and I'll give you a prize!\nI am the key that fits no lock, yet I open what is closed and blocked. What am I?\nThe path turns and continues east"
 Area_16.descriptions[((),())] = "Good job stranger take this lock pick\nWith that the stranger has lost interest in you and continued on his way.\nThe path turns and continues east"
 landscape[(-4,-5)] = Area_16
 
 Area_17 = Area()
 Area_17.allowed_movements.append('west')
-Area_17.usable_items['silver key'] = "You use the silver key to unlock the back door of the enemy ninja cat castle"
+Area_17.usable_items['silver key'] = "You use the silver key to unlock the back door of the enemy ninja cat's castle"
 Area_17.descriptions[((),('silver key',))] = "You've finally reached the enemy ninja cat's castle. But the entrance to the castle is very heavily guarded.\nyou decide to look for a secret entrance. After hours of searching you finally find a secret back door\nBut, the door is locked by a silver padlock blocking your entrance\nMove west to return to the path"
 Area_17.descriptions[((),())] = "The padlock on the door falls to the ground granting you entrance to the castle.\nMove south the enter the castle, Move west to return to the path"
 landscape[(-3,-5)] = Area_17
@@ -232,7 +232,7 @@ landscape[(-6,-3)] = Area_19
 
 Area_20 = Area()
 Area_20.allowed_movements.append('north')
-Area_20.usable_items['bow and arrow'] = "You shoot an arrow at the shinobi captain and hit him directly in the knee, he falls to the ground, getting a bit full of yourself you approach the enemy\nsuddenly the enemy stand up and slashed directly at your head\nYou backflip and draw your bow mid flip landing and shooting him through the eye\ndefeating the enemy"
+Area_20.usable_items['bow and arrow'] = "You shoot an arrow at the shinobi captain and hit him directly in the knee, he falls to the ground, getting a bit full of yourself you approach the enemy\nsuddenly the enemy stands up and slashes directly at your head\nYou backflip and barely dodge the slash\n you draw your bow mid flip and shooting him through the eye\ndefeating the enemy"
 Area_20.descriptions[((),('bow and arrow',))] = "You sneak through the castle using your shinobi skill. You finally reach the prison part of the castle.\nGuarding the door to the prison is one of the evil shinobi generals. The general is carrying several knifes, and no shield\n"
 Area_20.descriptions[((),())] = "Your shinobi training has finally come in clutch. You have defeated the enemy and can now procede through the door"
 landscape[(-3,-6)] = Area_20

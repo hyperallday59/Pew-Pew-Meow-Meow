@@ -267,3 +267,4 @@ landscape[(-1,-7)] = Area_23
 Area_24 = Area()
 Area_24.descriptions[((),())] = "You free your people and storm the castle using the ninja gear you've reclaimed\nCongradulations\nYou've beat the Game!"
 landscape[(-1,-8)] = Area_24
+#final save

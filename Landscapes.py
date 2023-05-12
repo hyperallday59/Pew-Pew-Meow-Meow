@@ -231,8 +231,13 @@ Area_19.descriptions[((),())] = "As you approach the cavity you find the skeleto
 landscape[(-6,-3)] = Area_19
 
 Area_20 = Area()
-Area_19.allowed_movements.append('north')
-Area_20.usable_items['bow and arrow'] =
-Area_20.descriptions[((),('bow and arrow',))] =
-Area_20.descriptions[((),())] =
+Area_20.allowed_movements.append('north')
+Area_20.usable_items['bow and arrow'] = "You shoot an arrow at the shinobi captain and hit him directly in the knee, he falls to the ground, getting a bit full of yourself you approach the enemy\nsuddenly the enemy stand up and slashed directly at your head\nYou backflip and draw your bow mid flip landing and shooting him through the eye\ndefeating the enemy"
+Area_20.descriptions[((),('bow and arrow',))] = "You sneak through the castle using your shinobi skill. You finally reach the prison part of the castle.\nGuarding the door to the prison is one of the evil shinobi generals. The general is carrying several knifes, and no shield\n"
+Area_20.descriptions[((),())] = "Your shinobi training has finally come in clutch. You have defeated the enemy and can now procede through the door"
 landscape[(-3,-6)] = Area_20
+
+Area_21 = Area()
+Area_21.allowed_movements.append('west')
+
+landscape[(-2,-6)] = Area_21

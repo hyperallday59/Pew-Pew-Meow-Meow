@@ -133,7 +133,7 @@ Area_8.allowed_movements.append('west')
 Area_8.area_items.append('horn')
 Area_8.usable_items['key'] = "You've opened the old chest and revealed an old battle horn."
 Area_8.descriptions[(('horn',),('key',))] = "After heaing west you find a mysterious chest\nMaybe you can find something to open it\nThe path continues west"
-Area_8.descriptions[(('horn',),())] = "The chest in the middle of the path is now open and a battle horn rests inside\n the path continues west"
+Area_8.descriptions[(('horn',),())] = "The chest in the middle of the path is now open and a horn rests inside\n the path continues west"
 Area_8.descriptions[((),())] = "The empty chest sits in the middle of the path\nThe path continues west"
 landscape[(1,-4)] = Area_8
 

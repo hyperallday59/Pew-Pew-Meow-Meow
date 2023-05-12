@@ -70,6 +70,12 @@ class Area():
 			self.allowed_movements.append('south')
 		if key == 'bow and arrow':
 			self.allowed_movements.append('east')
+		if key == 'sword':
+			self.allowed_movements.append('east')
+		if key == 'shield':
+			self.allowed_movements.append('south')
+		if key == 'spear':
+			self.allowed_movements.append('south')
 
 landscape = {}
 
@@ -239,5 +245,25 @@ landscape[(-3,-6)] = Area_20
 
 Area_21 = Area()
 Area_21.allowed_movements.append('west')
-
+Area_21.usable_items['sword'] = "You draw your sword and accept the generals challenge.\nYou fight for what seems like ages, you and the general are equally matched.\n You notice a pool of water on the floor nearby and begin to push the  enemy towards it. Finally you go for a jab and he slips on the floor, landing you the victory"
+Area_21.descriptions[((),('sword',))] = "You rushed through the door, and much to your dismay instead of seeing your friends your greeted with yet another shinobi general.\nThe general challenges you to a one on one sword duel"
+Area_21.descriptions[((),())] = "The general lies lifeless on the floor. The dungeon your currently in has no prisoners, every cell is empty.\nYou find another door leading deeper east into the prison"
 landscape[(-2,-6)] = Area_21
+
+Area_22 = Area()
+Area_22.allowed_movements.append('west')
+Area_22.usable_items['shield'] = "You crouch as low as you can and use your shield to block as many arrows as you can"
+Area_22.descriptions[((),('shield',))] =" Having defeated two generals you head through the door in the prison. It leads to a dark hallway that you begin to get traverse.\nSuddenly you step on a pressure plate and arows shoot towards you from the end of the hallway.\nYou barely dodge.\nThere must be some way to get Pst the arrows."
+Area_22.descriptions[((),())] = "You make it through the hallway unscathed.\nSadly your shield did not\nAt the end of the hallway is a door heading south."
+landscape[(-1,-6)] = Area_22
+
+Area_23 = Area()
+Area_23.allowed_movements.append('north')
+Area_23.usable_items['spear'] = "You use the spear and barely manage to fend him off. The two of you begin to engage in an epic battle\nBut, the general has the upper hand, an you are slowly losing\nsuddenly you hear your grandpas voice\nYou've got it kiddo\n Pride and confidence begin to fill you with new found power\nYou put your everything in one final attack.\n You thrust the spear through the generals stomach and win the fight"
+Area_23.descriptions[((),('spear',))] ="You enter the more secured area of the prison, at the very far side of this area you see people in cells\nSo you've come a loud voice booms\nYou were so distracted with finding your family that you completely missed the prison general\nHe throws 3 kunei at you all of which you barely dodge. He begins to rush you, defend yourself!"
+Area_23.descriptions[((),())] = "You've won the fight and beaten all of your enemies, all thats left is to free your people\nMove South"
+landscape[(-1,-7)] = Area_23
+
+Area_24 = Area()
+Area_24.descriptions[((),())] = "You free your people and storm the castle using the ninja gear you've reclaimed\n Congradulations\nYou've beat the Game!"
+landscape[(-1,-8)] = Area_24

@@ -152,3 +152,21 @@ Area_10.descriptions[(('invisibility',),('onion',))] ="You enter a large cavern 
 Area_10.descriptions[(('invisibility',),())] = "Thank you young one, the dragon booms, I'll lend you my power\nThe dragon gifts you the power of invisibility\nHINT: you need to grab the power up"
 Area_10.descriptions[((),())] = "You've claimed the power of invisibility\nThe dragon is happily munching on his onion\nThe only exit is the entrance to the cave"
 landscape[(4,-4)] = Area_10
+
+Area_11 = Area()
+Area_11.allowed_movements.append('west')
+Area_11.allowed_movements.append('east')
+Area_11.area_items.append('shield')
+Area_11.descriptions[(('shield',),())] = "While heading down the path you spot one of the sacred chests locked by a magical riddle from the Ninja cat village, They must have dropped it on the trail.\nThe riddle on the chest reads\nI'm by nature solitary, scarred by spear and wounded by sword, weary of battle. I frequently see the face of war, and fight hateful enemies; yet I hold no hope of help being brought to me in the battle, before I'm eventually done to death. What am I\n Solve the riddle and the box will open\nThe path continues west"
+Area_11.descriptions[((),())] = "Congradulation you've solved the riddle!\nThe path continues west"
+landscape[(-1,-4)] = Area_11
+
+Area_12 = Area()
+Area_12.allowed_movements.append('west')
+Area_12.allowed_movements.append('east')
+Area_12.area_items.append('rope')
+Area_12.descriptions[(('rope',),())] = "While traveling down the path you run into a run down cart. You search the cart and find some old rope\nThe path continues west"
+Area_12.descriptions[((),())] = "You've grabed the old rope from the cart, the cart is now empty\nThe path continues west"
+landscape[(-2,-4)] = Area_12
+
+Area_13 = Area()
